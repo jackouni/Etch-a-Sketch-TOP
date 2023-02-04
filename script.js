@@ -1,9 +1,20 @@
 const mainContainer = document.getElementById('main-container');
+let px = 16
 
+function runProgram(){
+    setGridSize(px)
+    addDiv(px)
 
+    const canvasPxs = document.querySelectorAll('.canvas-px');
+    canvasPxs.forEach((canvasPx) => {
+    canvasPx.addEventListener('mouseover', () => {
+        canvasPx.setAttribute('style', 'background-color: red;')
+    });
+    });
+}
 
 function setGridSize(px){// Sets the CSS Grid size/dimensions for the canvas, mainContainer.
-    mainContainer.setAttribute('style', `grid-template-rows: repeat(${px}px, auto) ; grid-template-columns: repeat(${px}px, auto) ;`)
+    mainContainer.setAttribute('style', `grid-template-rows: repeat(${px}, auto); grid-template-columns: repeat(${px}, auto);`)
 }
 
 function addDiv(px){// Creates & adds the <div>s to fill the canvas, mainContainer.
@@ -18,12 +29,6 @@ function addDiv(px){// Creates & adds the <div>s to fill the canvas, mainContain
 }
 
 
-/* function determinePxSize() {
-    A function that'll take our gridSize and determine the dimensions for each <div>
-    to have in order to evenly fill the mainContainer (the canvas)
-    Ex)
-        On a 16x16 grid with our canvas being 540x540px each <div> would have to be...
-        
-} */
 
-addDiv(16)
+
+runProgram()
