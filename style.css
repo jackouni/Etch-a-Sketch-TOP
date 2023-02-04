@@ -13,6 +13,9 @@ h1 {
 }
 
 #main-container {
+    display: grid;
+    grid-template-rows: repeat(16, auto) ;
+    grid-template-columns: repeat(16, auto) ;
     width: 540px;
     height: 540px;
     outline: solid black 4px;
