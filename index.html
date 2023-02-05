@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <h1 id="Title"> Etch-a-Sketch </h1>
-    <div id="main-container">
+    <div id="main-container"></div>
+    <div id="lower-container">
+        <div id="slider-column">
+            <div class="text">Canvas Size (pixels): <span id="value"></span></div>
+            <input type="range" min="8" max="100" value="16" id="grid-range" class="slider">
+        </div>
+
     </div>
 </body>
 </html>

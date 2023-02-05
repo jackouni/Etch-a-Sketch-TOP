@@ -1,5 +1,13 @@
 const canvas = document.getElementById('main-container');
-let px = 16
+let slider = document.getElementById('grid-range');
+let output = document.getElementById('value');
+let px = slider.value;
+
+output.textContent = slider.value ;
+
+slider.oninput = function() {
+    output.textContent = this.value ;
+}
 
 function runProgram(){
     setGridSize(px)
@@ -12,8 +20,6 @@ function runProgram(){
     });
     });
 }
-
-
 
 function setGridSize(px){// Sets the CSS Grid size/dimensions for the canvas, canvas.
     canvas.setAttribute('style', `grid-template-rows: repeat(${px}, auto); grid-template-columns: repeat(${px}, auto);`)
