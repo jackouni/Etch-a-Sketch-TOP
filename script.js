@@ -21,7 +21,7 @@ function runProgram(){
     });
 }
 
-function setGridSize(px){// Sets the CSS Grid size/dimensions for the canvas, canvas.
+function setGridSize(px){ // Sets the CSS Grid size/dimensions for the canvas, canvas.
     canvas.setAttribute('style', `grid-template-rows: repeat(${px}, auto); grid-template-columns: repeat(${px}, auto);`)
 }
 
@@ -36,7 +36,12 @@ function addDiv(px){// Creates & adds the <div>s to fill the canvas, canvas.
     }
 }
 
-
+function resetGrid(){ // Resets the grid by removing all created pxs
+    const canvasPxs = document.querySelectorAll('.canvas-px');
+    canvasPxs.forEach((canvasPx) => {
+        canvas.removeChild(canvasPx)
+    });     
+}
 
 
 runProgram()
