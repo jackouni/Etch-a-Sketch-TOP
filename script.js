@@ -1,13 +1,9 @@
 const canvas = document.getElementById('main-container');
 const slider = document.getElementById('grid-range');
 const output = document.getElementById('value');
-let canvasPxs = document.querySelectorAll('.canvas-px');
-let px = 8; 
 
-canvasPxs.forEach((canvasPx) => 
-canvasPx.addEventListener('mouseover', () => {
-    canvasPx.setAttribute('style', 'background-color: red;');
-} ));
+
+let px = 8; 
 
 output.textContent = slider.value ;
 slider.oninput = function() {
@@ -15,17 +11,17 @@ slider.oninput = function() {
 }
 
 
-function runProgram(){
+/* function runProgram(){
     console.log('runProgram() invoked')
 
-    /* slider.addEventListener('mouseup', () => {
+     slider.addEventListener('mouseup', () => {
         resetGrid();
         removeDiv();
         setGrid(slider.value);
         addDiv(slider.value);
         console.log('slider "mouseup" event')
-    }) */
-}
+    }) 
+} */
 
 function setGrid(px){ // Sets the CSS Grid size/dimensions for the canvas, canvas.
     canvas.setAttribute('style', `grid-template-rows: repeat(${px}, auto); grid-template-columns: repeat(${px}, auto);`)
@@ -57,8 +53,17 @@ function removeDiv(px){ // Resets the grid by removing all created pxs
     return console.log('removeDiv() invoked')
 }
 
+
+
 /*----------- TESTING AREA ------------------*/
     // Testing functions in this area
 
 setGrid(px);
 addDiv(px);
+
+let canvasPxs = document.querySelectorAll('.canvas-px');
+canvasPxs.forEach((canvasPx) => 
+canvasPx.addEventListener('mouseover', () => {
+    canvasPx.setAttribute('style', 'background-color: red;');
+} ));
+
