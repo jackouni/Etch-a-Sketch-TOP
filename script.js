@@ -9,25 +9,23 @@ slider.oninput = function() {
     output.textContent = this.value ;
 }
 
+function setCanvas(px){
+    setGrid(px);
+    addDiv(px);
+}
 
-/* function runProgram(){
-    console.log('runProgram() invoked')
+function resetCanvas(px){
+    removeDiv(px);
+    resetGrid();
+    setCanvas(px);
+}
 
-     slider.addEventListener('mouseup', () => {
-        resetGrid();
-        removeDiv();
-        setGrid(slider.value);
-        addDiv(slider.value);
-        console.log('slider "mouseup" event')
-    }) 
-} */
-
-function setGrid(px){ // Sets the CSS Grid size/dimensions for the canvas, canvas.
+function setGrid(px){ // Sets the CSS Grid dimensions for the canvas.
     canvas.setAttribute('style', `grid-template-rows: repeat(${px}, auto); grid-template-columns: repeat(${px}, auto);`)
     return console.log('setGrid() invoked');
 }
 
-function addDiv(px){// Creates & adds the <div>s to fill the canvas, canvas.
+function addDiv(px){ // Creates <div> elements that fill the canvas & invokes handleDrawEvent().
     for (let i = 0 ; i < (px * px) ; i++ ){
     let createDiv = document.createElement('div')
     createDiv.style.backgroundColor = 'white'
@@ -40,12 +38,12 @@ function addDiv(px){// Creates & adds the <div>s to fill the canvas, canvas.
     return console.log('addDiv() invoked');
 }
 
-function resetGrid(){ // Resets the CSS grid by changing the 'style' properties to their original.
+function resetGrid(){ // Resets the CSS grid by changing the 'style' properties to their original state.
     canvas.setAttribute('style', `grid-template-rows: repeat(8, auto); grid-template-columns: repeat(8, auto);`)
     return console.log('resetGrid() invoked')
 }
 
-function removeDiv(px){ // Resets the grid by removing all created pxs
+function removeDiv(px){ // Resets the grid by removing all the <div> elements in the canvas.
     const canvasPxs = document.querySelectorAll('.canvas-px');
     canvasPxs.forEach((canvasPx) => {
         canvasPx.remove();
@@ -57,7 +55,7 @@ function removeDiv(px){ // Resets the grid by removing all created pxs
     return console.log('removeDiv() invoked')
 }
 
-function handleDrawEvent(){
+function handleDrawEvent(){ // Adds event listeners to all the <div> elements in the canvas.
     let canvasPxs = document.querySelectorAll('.canvas-px');
     canvasPxs.forEach((canvasPx) => 
     canvasPx.addEventListener('mouseover', () => {
@@ -67,11 +65,10 @@ function handleDrawEvent(){
 }
 
 
-/*----------- TESTING AREA ------------------*/
+/*--------------- TESTING AREA ------------------*/
     // Testing functions in this area
 
-setGrid(px);
-addDiv(px);
+setCanvas(50);
 
 
 
