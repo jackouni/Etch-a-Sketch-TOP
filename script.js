@@ -2,7 +2,6 @@ const canvas = document.getElementById('main-container');
 const slider = document.getElementById('grid-range');
 const output = document.getElementById('value');
 
-
 let px = 8; 
 
 output.textContent = slider.value ;
@@ -37,6 +36,11 @@ function addDiv(px){// Creates & adds the <div>s to fill the canvas, canvas.
     createDiv.style.height = 'auto'
     canvas.appendChild(createDiv);
     }
+    let canvasPxs = document.querySelectorAll('.canvas-px');
+    canvasPxs.forEach((canvasPx) => 
+    canvasPx.addEventListener('mouseover', () => {
+        canvasPx.setAttribute('style', 'background-color: red;');
+    }));
     return console.log('addDiv() invoked');
 }
 
@@ -61,9 +65,5 @@ function removeDiv(px){ // Resets the grid by removing all created pxs
 setGrid(px);
 addDiv(px);
 
-let canvasPxs = document.querySelectorAll('.canvas-px');
-canvasPxs.forEach((canvasPx) => 
-canvasPx.addEventListener('mouseover', () => {
-    canvasPx.setAttribute('style', 'background-color: red;');
-} ));
+
 
