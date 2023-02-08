@@ -1,20 +1,30 @@
 const canvas = document.getElementById('main-container');
-const slider = document.getElementById('grid-range');
+const slider = document.getElementById('slide');
 const output = document.getElementById('value');
 
-let px = 50; 
+setCanvas(16); // Has to run first to set the canvas default (16x16)
+output.textContent = `${slider.value} x ${slider.value}` ;
 
-output.textContent = slider.value ;
-slider.oninput = function() {
-    output.textContent = this.value ;
+slider.oninput = function() { // ".oninput": method that listen for a user's input as an event
+    output.textContent = `${this.value} x ${this.value}` ;
 }
 
-function setCanvas(px){
+var px = slider.value 
+
+slider.addEventListener('mouseup', function() { 
+    px = slider.value
+    resetCanvas(px) ;
+});
+
+
+
+
+function setCanvas(px){ // The setGrid() & addDiv() functions in sequence.
     setGrid(px);
     addDiv(px);
 }
 
-function resetCanvas(px){
+function resetCanvas(px){ // The removeDiv(), resetGrid() and setCanvas() functions in sequence.
     removeDiv(px);
     resetGrid();
     setCanvas(px);
@@ -43,7 +53,7 @@ function resetGrid(){ // Resets the CSS grid by changing the 'style' properties 
     return console.log('resetGrid() invoked')
 }
 
-function removeDiv(px){ // Resets the grid by removing all the <div> elements in the canvas.
+function removeDiv(){ // Resets the grid by removing all the <div> elements in the canvas.
     const canvasPxs = document.querySelectorAll('.canvas-px');
     canvasPxs.forEach((canvasPx) => {
         canvasPx.remove();
@@ -66,9 +76,13 @@ function handleDrawEvent(){ // Adds event listeners to all the <div> elements in
 
 
 /*--------------- TESTING AREA ------------------*/
-    // Testing functions in this area
 
-setCanvas(50);
+
+
+
+
+
+
 
 
 
