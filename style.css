@@ -26,7 +26,8 @@ h1 {
 
 #lower-container {
     display: flex;
-    justify-content: space-between;
+    width: 95vw;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -38,7 +39,16 @@ h1 {
 }
 
 #slider-column {
-    width: 33vw;
+    border: solid rgb(157, 157, 157) 2px;
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 80%;
+    transition: 0.5s;
+}
+
+#slider-column:hover {
+    border: solid rgb(0, 0, 0) 2px;
+    opacity: 100%;
 }
 
 .slider {
@@ -47,7 +57,8 @@ h1 {
     height: 15px;
     background-image: linear-gradient(90deg, blue, purple, red );
     border-radius: 10px;
-    opacity: 50%;
+    opacity: 70%;
+    
     transition: 0.5s;
 }
 
@@ -71,8 +82,7 @@ h1 {
 
 .slider:hover{
     opacity: 100%;
-    border: solid black;
-    box-shadow: 2px 2px;
+    border: solid black 2px;
 }
 
 .slider::after {
@@ -91,4 +101,22 @@ h1 {
     position: absolute;
     top: 25%;
     left: 12%;
+}
+
+#rainbow-btn {
+    background-color: rgb(226, 226, 226);
+    margin-right: 100px;
+    height: 50px;
+    width: 150px;
+    background-image: linear-gradient(red, orange, yellow, green, blue, indigo, purple);
+    font-weight: 800;
+    color: white;
+    opacity: 80%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+#rainbow-btn:hover {
+    opacity: 100%;
+    border: solid black 2px;
 }
