@@ -112,7 +112,8 @@ h1 {
     font-weight: 800;
     color: white;
     opacity: 80%;
-    border-radius: 10px;
+    border-radius: 5px;
+
     transition: 0.5s;
 }
 
@@ -120,3 +121,59 @@ h1 {
     opacity: 100%;
     border: solid black 2px;
 }
+
+#color-btn {
+    background-color: rgb(239, 239, 239);
+    margin-right: 100px;
+    height: 50px;
+    width: 150px;
+    font-weight: 800;
+    color: rgb(99, 99, 99);
+    opacity: 80%;
+    border-radius: 5px;
+    
+    transition: 0.5s;
+    }
+#color-btn:hover {
+    opacity: 100%;
+    color: black;
+    border: solid black 2px;
+    }
+
+#color-btn {
+    background-color: rgb(239, 239, 239);
+    margin-right: 100px;
+    height: 50px;
+    width: 150px;
+    font-weight: 800;
+    color: rgb(99, 99, 99);
+    opacity: 80%;
+    border-radius: 5px;
+    
+    transition: 0.5s;
+    }
+#color-btn:hover {
+    opacity: 100%;
+    color: black;
+    border: solid black 2px;
+    }
+
+#eraser-btn {
+    background-color: rgb(252, 161, 233);
+    margin-right: 100px;
+    height: 50px;
+    width: 150px;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+    opacity: 80%;
+    border-radius: 5px;
+    
+    transition: 0.5s;
+    }
+#eraser-btn:hover {
+    opacity: 100%;
+    color: black;
+    border: solid black 2px;
+    }
+
+
