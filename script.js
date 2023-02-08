@@ -75,9 +75,11 @@ function handleDrawEvent(){ // Adds event listeners to all the <div> elements in
     console.log('handleDrawEvent() invoked')
 }
 
-function randomColor(){
+function randomColor(){ // Returns a random rbg color value.
     function randomRgbValue(){
-        return (Math.floor(Math.random() * 255))
+        // Math.floor rounds any decimal number to the closest whole number
+        // Math.random produces a random float between 0 and 1
+        return (Math.floor(Math.random() * 255)) 
     }
     return (`rgb(${randomRgbValue()}, ${randomRgbValue()}, ${randomRgbValue()})`) 
 }
