@@ -1,6 +1,7 @@
 const canvas = document.getElementById('main-container');
 const slider = document.getElementById('slide');
 const output = document.getElementById('value');
+const rainbowBtn = document.getElementById('rainbow-btn');
 
 setCanvas(16); // Has to run first to set the canvas default (16x16)
 output.textContent = `${slider.value} x ${slider.value}` ;
@@ -14,11 +15,11 @@ var px = slider.value
 slider.addEventListener('mouseup', function() { 
     px = slider.value
     resetCanvas(px) ;
-});
+});  
 
 
 
-
+ 
 function setCanvas(px){ // The setGrid() & addDiv() functions in sequence.
     setGrid(px);
     addDiv(px);
@@ -72,6 +73,13 @@ function handleDrawEvent(){ // Adds event listeners to all the <div> elements in
         canvasPx.setAttribute('style', 'background-color: red;');
     }));
     console.log('handleDrawEvent() invoked')
+}
+
+function randomColor(){
+    function randomRgbValue(){
+        return (Math.floor(Math.random() * 255))
+    }
+    return (`rgb(${randomRgbValue()}, ${randomRgbValue()}, ${randomRgbValue()})`) 
 }
 
 
