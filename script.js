@@ -19,9 +19,10 @@ slider.addEventListener('mouseup', function() {
     resetCanvas(px) ;
 });  
 
-function setCanvas(px){ // The setGrid() & addDiv() functions in sequence.
+function setCanvas(px){ // The setGrid(), addDiv() & handleDrawEvent functions in sequence.
     setGrid(px);
     addDiv(px);
+    handleDrawEvent();
 }
 
 function resetCanvas(px){ // The removeDiv(), resetGrid() and setCanvas() functions in sequence.
@@ -35,7 +36,7 @@ function setGrid(px){ // Sets the CSS Grid dimensions for the canvas.
     return console.log('setGrid() invoked');
 }
 
-function addDiv(px){ // Creates <div> elements that fill the canvas & invokes handleDrawEvent().
+function addDiv(px){ // Creates <div> elements that fill the canvas.
     for (let i = 0 ; i < (px * px) ; i++ ){
     let createDiv = document.createElement('div')
     createDiv.style.backgroundColor = 'white'
@@ -44,7 +45,6 @@ function addDiv(px){ // Creates <div> elements that fill the canvas & invokes ha
     createDiv.style.height = 'auto'
     canvas.appendChild(createDiv);
     } 
-    handleDrawEvent();
     return console.log('addDiv() invoked');
 }
 
@@ -82,6 +82,17 @@ function randomColor(){ // Returns a random rbg color value.
     }
     return (`rgb(${randomRgbValue()}, ${randomRgbValue()}, ${randomRgbValue()})`) 
 }
+
+function handleRainbowEvent(){
+    let canvasPxs = document.querySelectorAll('.canvas-px');
+    canvasPxs.forEach((canvasPx) => 
+    canvasPx.addEventListener('mouseover', () => {
+        canvasPx.setAttribute('style', `background-color: ${randomColor()};`);
+    }));
+    console.log('handleDrawEvent() invoked')
+}
+
+
 
 
 /*--------------- TESTING AREA ------------------*/
