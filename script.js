@@ -1,4 +1,4 @@
-/*------ Rainbow-feature Branch -----*/
+/*------ Color-Picker feature Branch -----*/
 
 /* ----- VARIABLES & ELEMENT SELECTIONS -*/
 
@@ -6,10 +6,13 @@
     const slider = document.getElementById('slide');
     const output = document.getElementById('value');
     const rainbowBtn = document.getElementById('rainbow-btn'); 
+    const colorBtn = document.getElementById('color-btn');
+    const eraserBtn = document.getElementById('eraser-btn');
 
     var px = slider.value
     var colorPickerActive = true
     var rainbowActive = false
+    var eraserActive = false
 
 
 /* ----- INITIALIZING FUNCTIONS ---------*/
@@ -34,8 +37,17 @@
     rainbowBtn.addEventListener('click', function(){
         colorPickerActive = false
         rainbowActive = true
+        var eraserActive = false
 
         handleRainbowEvent();
+    })
+
+    eraserBtn.addEventListener('click', function(){
+        colorPickerActive = false
+        rainbowActive = false
+        var eraserActive = true
+
+        handleEraseEvent();
     })
 
 
@@ -48,6 +60,8 @@
             return handleRainbowEvent();
         } else if (colorPickerActive == true){
             return handleDrawEvent();
+        } else if (eraserActive == true){
+            return handleEraseEvent();
         }
     }
 
@@ -120,6 +134,19 @@
             canvasPx.setAttribute('style', `background-color: ${randomColor()};`);
         }));
         console.log('handleRainbowEvent() invoked')
+    }
+
+    function handleEraseEvent(){ // Adds event listeners to all the <div> elements in the canvas.
+        var colorPickerActive = false
+        var rainbowActive = false
+        var eraserActive = true
+
+        let canvasPxs = document.querySelectorAll('.canvas-px');
+        canvasPxs.forEach((canvasPx) => 
+        canvasPx.addEventListener('mouseover', () => {
+            canvasPx.setAttribute('style', 'background-color: white;');
+        }));
+        console.log('handleDrawEvent() invoked')
     }
 
 /* ----- TESTING & PSEUDO-CODE ----------------------*/  
