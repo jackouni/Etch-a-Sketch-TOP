@@ -3,6 +3,8 @@ const slider = document.getElementById('slide');
 const output = document.getElementById('value');
 const rainbowBtn = document.getElementById('rainbow-btn');
 
+/*----- Rainbow-feature Branch -----*/
+
 setCanvas(16); // Has to run first to set the canvas default (16x16)
 output.textContent = `${slider.value} x ${slider.value}` ;
 
@@ -17,9 +19,6 @@ slider.addEventListener('mouseup', function() {
     resetCanvas(px) ;
 });  
 
-
-
- 
 function setCanvas(px){ // The setGrid() & addDiv() functions in sequence.
     setGrid(px);
     addDiv(px);
