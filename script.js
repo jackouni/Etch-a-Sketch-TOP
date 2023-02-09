@@ -2,7 +2,7 @@
 
 /* ----- VARIABLES & ELEMENT SELECTIONS -*/
 
-    const canvas = document.getElementById('main-container');
+    const canvas = document.getElementById('canvas-container');
     const slider = document.getElementById('slide');
     const output = document.getElementById('value');
     const rainbowBtn = document.getElementById('rainbow-btn'); 

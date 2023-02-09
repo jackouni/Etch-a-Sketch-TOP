@@ -15,13 +15,33 @@ h1 {
 }
 
 #main-container {
+    display: flex;
+    width: 99vw;
+    padding-bottom: 20px;
+    border-bottom: double black 10px;
+}
+
+#canvas-container {
     display: grid;
     grid-template-rows: repeat(16, auto);
-     grid-template-columns: repeat(16, auto);
+    grid-template-columns: repeat(16, auto);
     width: 540px;
     height: 540px;
+    margin-left: 205px;
     outline: solid black 4px;
     box-shadow: 8px 8px 10px;
+}
+
+#color-picker-container{
+    display: flex;
+    margin-left: 75px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#input-color {
+    height: 200px;
+    width: 150px;
 }
 
 #lower-container {
@@ -40,6 +60,7 @@ h1 {
 
 #slider-column {
     border: solid rgb(157, 157, 157) 2px;
+    width:700px;
     border-radius: 10px;
     padding: 10px;
     opacity: 80%;
@@ -85,33 +106,17 @@ h1 {
     border: solid black 2px;
 }
 
-.slider::after {
-    content:'108';
-    color: black;
-    font-size: 24px;
-    position: absolute;
-    top: 25%;
-    left: 80%;
-}
 
-.slider::before {
-    content:'0';
-    color: black;
-    font-size: 24px;
-    position: absolute;
-    top: 25%;
-    left: 12%;
-}
 
 #rainbow-btn {
     background-color: rgb(226, 226, 226);
-    margin-right: 100px;
+    margin-top: 50px;
     height: 50px;
     width: 150px;
     background-image: linear-gradient(red, orange, yellow, green, blue, indigo, purple);
     font-weight: 800;
     color: white;
-    opacity: 80%;
+    opacity: 90%;
     border-radius: 5px;
 
     transition: 0.5s;
@@ -120,11 +125,13 @@ h1 {
 #rainbow-btn:hover {
     opacity: 100%;
     border: solid black 2px;
+    height:55px;
+    width:155px ;
+    box-shadow: 10px 10px 3px;
 }
 
 #color-btn {
     background-color: rgb(239, 239, 239);
-    margin-right: 100px;
     height: 50px;
     width: 150px;
     font-weight: 800;
@@ -142,12 +149,11 @@ h1 {
 
 #color-btn {
     background-color: rgb(239, 239, 239);
-    margin-right: 100px;
     height: 50px;
     width: 150px;
     font-weight: 800;
-    color: rgb(99, 99, 99);
-    opacity: 80%;
+    color: rgb(58, 58, 58);
+    opacity: 90%;
     border-radius: 5px;
     
     transition: 0.5s;
@@ -156,22 +162,26 @@ h1 {
     opacity: 100%;
     color: black;
     border: solid black 2px;
+    height: 55px;
+    width:155px ;
     }
 
 #eraser-btn {
     background-color: rgb(252, 161, 233);
-    margin-right: 100px;
+    margin-top: 50px;
     height: 50px;
     width: 150px;
     font-weight: 800;
     color: rgb(0, 0, 0);
-    opacity: 80%;
+    opacity: 90%;
     border-radius: 5px;
     
     transition: 0.5s;
     }
 #eraser-btn:hover {
     opacity: 100%;
+    height: 55px;
+    width:155px ;
     color: black;
     border: solid black 2px;
     }

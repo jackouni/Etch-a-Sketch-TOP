@@ -5,16 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
+    <link type="text/css" href="colorjoe/colorjoe.css">
     <link rel="stylesheet" href="style.css">
+
     <script src="script.js" defer></script>
+    <script src="colorjoe/colorjoe.min.js"></script>
 </head>
 <body>
     <h1 id="Title"> Etch-a-Sketch </h1>
-    <div id="main-container"></div>
+    <div id="main-container">
+        <div id="color-picker-container">
+            <button id="color-btn" class="buttons">Color</button>
+            <input type="color" id="input-color">
+            <button id="rainbow-btn" class="buttons">Rainbow Mode</button>
+            <button id="eraser-btn" class="buttons">Eraser</button>
+        </div>
+        <div id="canvas-container"></div>
+    </div>
     <div id="lower-container">
-        <button id="rainbow-btn" class="buttons">Rainbow Mode</button>
-        <button id="color-btn" class="buttons">Color</button>
-        <button id="eraser-btn" class="buttons">Eraser</button>
         <div id="slider-column">
             <div class="text">Canvas Size (pixels): <span id="value"></span></div>
             <input type="range" min="2" max="75" value="16" id="slide" class="slider">
