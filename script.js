@@ -3,11 +3,24 @@
 /* ----- VARIABLES & ELEMENT SELECTIONS -*/
 
     const canvas = document.getElementById('canvas-container');
+    const lowerContainer = document.getElementById('lower-container')
     const slider = document.getElementById('slide');
     const output = document.getElementById('value');
     const rainbowBtn = document.getElementById('rainbow-btn'); 
     const colorBtn = document.getElementById('color-btn');
     const eraserBtn = document.getElementById('eraser-btn');
+    const colorInput = document.getElementById('inputcolor');
+    const colorWell =document.getElementById('color-well')
+    const defaultColor = "#0000ff"
+
+    window.addEventListener("load", function(){
+        let canvasPxs = document.querySelectorAll('.canvas-px');
+        colorInput.value = defaultColor
+        canvasPxs.forEach((canvasPx) => 
+        canvasPx.addEventListener('mouseover', () => {
+            canvasPx.setAttribute('style', 'background-color: black;');
+        }));
+    })
 
     var px = slider.value
     var colorPickerActive = true
@@ -33,11 +46,11 @@
         px = slider.value
         resetCanvas(px) ;
     });
-    
+
     rainbowBtn.addEventListener('click', function(){
         colorPickerActive = false
         rainbowActive = true
-        var eraserActive = false
+        eraserActive = false
 
         handleRainbowEvent();
     })
@@ -45,23 +58,52 @@
     eraserBtn.addEventListener('click', function(){
         colorPickerActive = false
         rainbowActive = false
-        var eraserActive = true
+        eraserActive = true
 
         handleEraseEvent();
+    })
+
+    colorBtn.addEventListener('click', function(){
+        colorPickerActive = true
+        rainbowActive = false
+        eraserActive = false
+        color = colorInput.value
+
+        handleColorEvent(color);
+    })
+
+    colorInput.addEventListener('input', function(){
+        colorPickerActive = true
+        rainbowActive = false
+        eraserActive = false
+        color = colorInput.value
+
+        handleColorEvent(color);
     })
 
 
 /* ----- FUNCTIONS ----------------------*/
 
+    function handleColorEvent(){
+        colorWell.style.backgroundColor = color;
+        let canvasPxs = document.querySelectorAll('.canvas-px');
+        canvasPxs.forEach((canvasPx) => 
+        canvasPx.addEventListener('mouseover', () => {
+            canvasPx.setAttribute('style', `background-color: ${color};`);
+        }));
+        console.log('handleDrawEvent() invoked')
+    }
+
     function setCanvas(px){ // The setGrid(), addDiv() & handleDrawEvent functions in sequence.
         setGrid(px);
         addDiv(px);
+        color = colorInput.value
         if (rainbowActive == true){
             return handleRainbowEvent();
-        } else if (colorPickerActive == true){
-            return handleDrawEvent();
         } else if (eraserActive == true){
             return handleEraseEvent();
+        } else if (colorPickerActive == true){
+            return handleColorEvent(color);
         }
     }
 
@@ -113,7 +155,7 @@
         let canvasPxs = document.querySelectorAll('.canvas-px');
         canvasPxs.forEach((canvasPx) => 
         canvasPx.addEventListener('mouseover', () => {
-            canvasPx.setAttribute('style', 'background-color: red;');
+            canvasPx.setAttribute('style', 'background-color: black;');
         }));
         console.log('handleDrawEvent() invoked')
     }
