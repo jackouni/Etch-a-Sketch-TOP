@@ -51,7 +51,7 @@ eraserBtn.addEventListener('click', function(){
     handleEraseEvent();
 })
 
-colorBtn.addEventListener('click', function(){
+colorInput.addEventListener('click', function(){
     colorPickerActive = true
     rainbowActive = false
     eraserActive = false
