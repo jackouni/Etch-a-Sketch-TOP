@@ -7,7 +7,7 @@ const output = document.getElementById('value');
 const rainbowBtn = document.getElementById('rainbow-btn'); 
 const colorBtn = document.getElementById('color-btn');
 const eraserBtn = document.getElementById('eraser-btn');
-const colorInput = document.getElementById('inputcolor');
+const colorInput = document.getElementById('input-color');
 const defaultColor = "#0000ff"
 
 // Global variables set to their default state. These depict what 'mode' is active.
