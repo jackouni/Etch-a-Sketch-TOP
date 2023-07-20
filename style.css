@@ -5,7 +5,7 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-image: url(backdrop2.jpeg);
+    background-image: url('cloudy-landscape-cumulus-haze-scenic.jpg');
     background-position:center;
     overflow: hidden;
 } 
@@ -38,23 +38,24 @@ body {
 }
 
 .buttons {
-    height: 4em;
+    height: 8em;
     width: 8em;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     border: solid black 0.1rem;
 }
 
 #mode-picker-container{
     display: flex;
-    background-color: rgba(255, 255, 255, 0.716);
+    background-image: url('golden-texture-background/Gold.jpg');
+    margin-left: 5rem;
+    margin-right: 5rem;
     height: 25rem;
     width: 8rem;
+    padding: 1rem;
     gap: 2rem;
-    padding: 5px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid black 2px;
     border-radius: 8px;
     transition: 0.5s;
 }
@@ -62,7 +63,8 @@ body {
 #lower-container {
     display: flex;
     position: absolute;
-    bottom: 1.5rem;
+    left: 18.5%;
+    bottom: 1.7rem;
     width: 57rem;
     justify-content: center;
     height: 2.5rem;
@@ -76,8 +78,8 @@ body {
 }
 
 #slider-column {
-    border: solid rgb(157, 157, 157) 2px;
-    background-color: rgba(255, 255, 255, 0.585);
+    background-image: url('abstract-smooth-brown-wall-background-layout-design-studio-room-web-template-business-report-with-smooth-circle-gradient-color.jpg');
+    background-size:cover;
     height: 3.5rem;
     width: 100%;
     border-radius: 10px;
@@ -87,14 +89,13 @@ body {
 #slider-column:hover {
     border: solid rgb(0, 0, 0) 2px;
     opacity: 100%;
-    background-color: rgba(255, 255, 255, 0.815);
 }
 
 .slider {
     -webkit-appearance: none;
     width: 99%;
     height: 15px;
-    background-image: linear-gradient(90deg, blue, purple, red );
+    border: solid black 1px;
     border-radius: 10px;
     opacity: 100%;
     
@@ -106,7 +107,7 @@ body {
     appearance: none;
     width: 25px;
     height: 25px;
-    background: white;
+    background: rgb(0, 0, 0);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -114,7 +115,7 @@ body {
 .slider::-moz-range-thumb{
     width: 25px;
     height: 25px;
-    background: white;
+    background: rgb(0, 0, 0);
     border-radius: 50%;
     cursor: pointer;
 }
