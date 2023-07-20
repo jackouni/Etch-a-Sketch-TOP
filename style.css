@@ -18,7 +18,7 @@ body {
 .etch-sketch-container {
     position: relative;
     max-width: min-content;
-    right: 20px;
+    right: 18px;
     bottom: 50px;
 }
 
@@ -75,7 +75,7 @@ body {
     display: flex;
     position: absolute;
     left: 18.5%;
-    bottom: 3rem;
+    bottom: 4rem;
     width: 57rem;
     justify-content: center;
     height: 2.5rem;
@@ -182,7 +182,11 @@ body {
 }
 
 #mode-picker-container:hover {
-    box-shadow: 0 0 0.5rem 0.5rem #fffcc0;
+    box-shadow: 0 0 0.65rem 0.65rem #fffcc0;
+}
+
+.slider:hover {
+    box-shadow: 0 0 0.65rem 0.65rem #fffcc0;
 }
 
 
