@@ -10,9 +10,16 @@ body {
     overflow: hidden;
 } 
 
+@font-face {
+    font-family: Royal-Initialen;
+    src: url('RoyalInitialen.ttf');
+}
+
 .etch-sketch-container {
     position: relative;
     max-width: min-content;
+    right: 20px;
+    bottom: 50px;
 }
 
 .etch-sketch-container > *:not(img){
@@ -41,17 +48,21 @@ body {
     height: 8em;
     width: 8em;
     border-radius: 1rem;
-    border: solid black 0.1rem;
+    border: solid black 0.2rem;
 }
 
 #mode-picker-container{
     display: flex;
-    background-image: url('golden-texture-background/Gold.jpg');
-    margin-left: 5rem;
-    margin-right: 5rem;
+    font-family: Royal-Initialen;
+    font-size: 3rem;
+    color: #0d0a00bc;
+    background-image: url('gold-backdrop.jpeg');
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border: solid black 3px;
     height: 25rem;
-    width: 8rem;
-    padding: 1rem;
+    width: 12rem;
+    padding: 1.25rem;
     gap: 2rem;
     flex-direction: column;
     justify-content: center;
@@ -64,7 +75,7 @@ body {
     display: flex;
     position: absolute;
     left: 18.5%;
-    bottom: 1.7rem;
+    bottom: 3rem;
     width: 57rem;
     justify-content: center;
     height: 2.5rem;
@@ -78,27 +89,23 @@ body {
 }
 
 #slider-column {
-    background-image: url('abstract-smooth-brown-wall-background-layout-design-studio-room-web-template-business-report-with-smooth-circle-gradient-color.jpg');
-    background-size:cover;
-    height: 3.5rem;
-    width: 100%;
-    border-radius: 10px;
-    transition: 0.5s;
-}
+    height: 3rem;
+    width: 50rem; 
+} 
 
-#slider-column:hover {
-    border: solid rgb(0, 0, 0) 2px;
-    opacity: 100%;
+.text {
+    font-family: Royal-Initialen;
+    font-size: 2.5rem;
+    color: #0d0a00bc;
 }
 
 .slider {
     -webkit-appearance: none;
+    background-image: url('background-image-g6f93ebd5c_1280.jpg');
     width: 99%;
-    height: 15px;
-    border: solid black 1px;
+    height: 1rem;
+    border: solid rgb(0, 0, 0) 3px;
     border-radius: 10px;
-    opacity: 100%;
-    
     transition: 0.5s;
 }
 
@@ -132,11 +139,7 @@ body {
 
 #rainbow-btn {
     background-image: linear-gradient(red, orange, yellow, green, blue, indigo, purple);
-    font-weight: 800;
-    color: white;
-    border: solid black 2px;
-    opacity: 80%;
-    border-radius: 5px;
+    opacity: 100%;
 
     transition: 0.5s;
 }
@@ -157,23 +160,29 @@ body {
 
 
 #input-color::-webkit-color-swatch{
-    border-radius: 0.5rem;
-    border: solid black 0.1rem;
+
+    border-radius: 1rem;
+    border: solid black 0.2rem;
     transition: 0.5s;
 }
 
 #input-color::-moz-color-swatch{
-    border-radius: 0.5rem;
-    border: solid black 0.1rem;
+    
+    border-radius: 1rem;
+    border: solid black 0.2rem;
     transition: 0.5s;
 }
 
 #input-color::-webkit-color-swatch:hover{
-    box-shadow: 0 0 0.2rem 0.2rem #fffcc0;
+    box-shadow: 0 0 0.3rem 0.3rem #fffcc0;
 }
 
 #input-color::-moz-color-swatch:hover{
-    box-shadow: 0 0 0.2rem 0.2rem #fffcc0;
+    box-shadow: 0 0 0.3rem 0.3rem #fffcc0;
+}
+
+#mode-picker-container:hover {
+    box-shadow: 0 0 0.5rem 0.5rem #fffcc0;
 }
 
 
