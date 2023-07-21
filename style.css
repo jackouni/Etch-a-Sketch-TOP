@@ -10,6 +10,12 @@ body {
     overflow: hidden;
 } 
 
+audio {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
 @font-face {
     font-family: Royal-Initialen;
     src: url('RoyalInitialen.ttf');
@@ -158,6 +164,15 @@ body {
     box-shadow: 0 0 0.2rem 0.2rem #fffcc0;
     }
 
+#reset-btn {
+    background-color: lightgray;
+    transition: 0.5;
+}
+
+#reset-btn:hover {
+    background-color: rgb(184, 184, 184);
+
+}
 
 #input-color::-webkit-color-swatch{
 

@@ -7,8 +7,12 @@ const output = document.getElementById('value');
 const rainbowBtn = document.getElementById('rainbow-btn'); 
 const colorBtn = document.getElementById('color-btn');
 const eraserBtn = document.getElementById('eraser-btn');
-const resetBtn = document.getElementById('reset-btn')
+const resetBtn = document.getElementById('reset-btn');
+const audioTrack = document.querySelector('audio') ;
 const colorInput = document.getElementById('input-color');
+
+audioTrack.volume = 0.05
+console.log(audioTrack)
 
 const defaultColor = "#0000ff"
 
