@@ -10,6 +10,29 @@ body {
     overflow: hidden;
 } 
 
+.speaker-container{
+    position: absolute;
+    top: 1rem;
+    left: 85rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.speaker-on, .speaker-off {
+    height: 100%;
+    width: 100%;
+    opacity: 0.65;
+
+    transition: 1s;
+}
+
+.speaker-on:hover, .speaker-off:hover {
+    opacity: 1;
+}
+
+.speaker-off {
+    display: none ;
+}
 audio {
     margin: 0;
     padding: 0;
@@ -74,7 +97,7 @@ audio {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 #lower-container {
@@ -112,7 +135,7 @@ audio {
     height: 1rem;
     border: solid rgb(0, 0, 0) 3px;
     border-radius: 10px;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .slider::-webkit-slider-thumb{
@@ -133,8 +156,9 @@ audio {
     cursor: pointer;
 }
 
-
 #input-color {
+    height: 8em;
+    width: 8em;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -147,7 +171,7 @@ audio {
     background-image: linear-gradient(red, orange, yellow, green, blue, indigo, purple);
     opacity: 100%;
 
-    transition: 0.5s;
+    transition: 1s;
 }
 
 #rainbow-btn:hover {
@@ -157,7 +181,7 @@ audio {
 #eraser-btn {
     background-color: rgb(252, 161, 233);
     
-    transition: 0.5s;
+    transition: 1s;
     }
 
 #eraser-btn:hover {
@@ -166,7 +190,7 @@ audio {
 
 #reset-btn {
     background-color: lightgray;
-    transition: 0.5;
+    transition: 1s;
 }
 
 #reset-btn:hover {
@@ -178,14 +202,14 @@ audio {
 
     border-radius: 1rem;
     border: solid black 0.2rem;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 #input-color::-moz-color-swatch{
     
     border-radius: 1rem;
     border: solid black 0.2rem;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 #input-color::-webkit-color-swatch:hover{

@@ -13,6 +13,7 @@
 </head>
 <body>
     <div id="mode-picker-container"> Modes:
+        
         <input type="color" class="buttons" name="color" id="input-color" value="#0000ff">
         <button id="rainbow-btn" class="buttons"></button>
         <button id="eraser-btn" class="buttons"></button>
@@ -24,9 +25,15 @@
        <div id="canvas-container"></div>
     </div>
 
-    <audio autoplay loop>
-        <source src="Spirit of Fire - Jesse Gallagher.mp3">
-    </audio>
+    <div class="speaker-container">
+        <img src="sound-on-icon.png" alt="" class="speaker-on">
+        <img src="sound-off-icon.png" alt="" class="speaker-off">
+        <audio autoplay loop>
+            <source src="Spirit of Fire - Jesse Gallagher.mp3">
+        </audio>
+        <img src="" alt="" class="speaker-icon">
+    </div>
+
 
     <div id="lower-container">
         <div id="slider-column">

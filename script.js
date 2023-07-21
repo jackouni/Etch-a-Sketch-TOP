@@ -1,4 +1,4 @@
-/* ----- VARIABLES & ELEMENT SELECTIONS -*/
+/* ---- VARIABLES & ELEMENT SELECTIONS */
 
 const canvas = document.getElementById('canvas-container');
 const lowerContainer = document.getElementById('lower-container')
@@ -11,10 +11,8 @@ const resetBtn = document.getElementById('reset-btn');
 const audioTrack = document.querySelector('audio') ;
 const colorInput = document.getElementById('input-color');
 
-audioTrack.volume = 0.05
-console.log(audioTrack)
 
-const defaultColor = "#0000ff"
+/* ------ DEFAULT/INITIAL VALUES ----- */
 
 // Global variables set to their default state. These depict what 'mode' is active.
 var px = slider.value
@@ -22,15 +20,30 @@ var colorPickerActive = true
 var rainbowActive = false
 var eraserActive = false
 
-/* ----- EVENT LISTENERS -*/
+// Sets the default color of 'blue' 
+let color = "#0000ff"
 
-// Has to run first to set the initial canvas default (16x16)
+// Sets initial canvas default size (16x16)
 setCanvas(16);
-// Has to run first in order to set the intitial 'pen' color
-handleDrawEvent();
 
-// Takes the current-live value of the slider and puts it as text beside 'Canvas Size:'
-output.textContent = `${slider.value} x ${slider.value}` ; 
+// Sets the default output text for the canvas size
+output.textContent = `${16} x ${16}` ;
+
+// Sets the default position of the slider
+slider.value = 16 ; 
+
+// Sets the default color input value
+colorInput.value = color
+
+// Sets initial pen color
+handleColorEvent(color);
+
+// Sets the audio volume for our page
+audioTrack.volume = 0.07
+
+
+/* ------ EVENT LISTENERS -------------*/
+
 // ".oninput": method that listen for a user's input as an event
 slider.oninput = function() { 
     output.textContent = `${this.value} x ${this.value}` ;
@@ -80,7 +93,7 @@ resetBtn.addEventListener('click', function(){
 });
 
 
-/* ------ FUNCTIONS ----------------------*/
+/* ------ FUNCTIONS -----------------*/
 
 // Adds event listeners to all the <div> elements in the canvas.
     function handleColorEvent(){
