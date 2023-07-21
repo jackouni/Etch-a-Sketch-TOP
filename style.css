@@ -7,7 +7,7 @@ body {
     height: 100vh;
     background-image: url('cloudy-landscape-cumulus-haze-scenic.jpg');
     background-position:center;
-    overflow: hidden;
+    overflow: scroll;
 } 
 
 .speaker-container{
@@ -18,19 +18,21 @@ body {
     width: 3rem;
 }
 
-.speaker-on, .speaker-off {
+#speaker-on, #speaker-off {
     height: 100%;
     width: 100%;
     opacity: 0.65;
-
-    transition: 1s;
 }
 
-.speaker-on:hover, .speaker-off:hover {
+#speaker-on:hover, #speaker-off:hover {
     opacity: 1;
 }
 
-.speaker-off {
+#speaker-off {
+    display: block;
+}
+
+#speaker-off {
     display: none ;
 }
 audio {

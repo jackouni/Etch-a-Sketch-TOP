@@ -1,24 +1,33 @@
 /* ---- VARIABLES & ELEMENT SELECTIONS */
 
 const canvas = document.getElementById('canvas-container');
+
 const lowerContainer = document.getElementById('lower-container')
 const slider = document.getElementById('slide');
 const output = document.getElementById('value');
+
 const rainbowBtn = document.getElementById('rainbow-btn'); 
+
 const colorBtn = document.getElementById('color-btn');
-const eraserBtn = document.getElementById('eraser-btn');
-const resetBtn = document.getElementById('reset-btn');
-const audioTrack = document.querySelector('audio') ;
 const colorInput = document.getElementById('input-color');
 
+const eraserBtn = document.getElementById('eraser-btn');
+const resetBtn = document.getElementById('reset-btn');
 
+const audioTrack = document.querySelector('audio') ;
+const audioButtons = document.getElementsByClassName('audio-btn')
+const speakerOn = document.getElementById('speaker-on')
+const speakerOff = document.getElementById('speaker-off')
+
+console.log(audioButtons)
 /* ------ DEFAULT/INITIAL VALUES ----- */
 
-// Global variables set to their default state. These depict what 'mode' is active.
+// Global variables to set default states and to track the state 
 var px = slider.value
 var colorPickerActive = true
 var rainbowActive = false
 var eraserActive = false
+var audioActive = true
 
 // Sets the default color of 'blue' 
 let color = "#0000ff"
@@ -39,7 +48,7 @@ colorInput.value = color
 handleColorEvent(color);
 
 // Sets the audio volume for our page
-audioTrack.volume = 0.07
+audioTrack.volume = 0.075
 
 
 /* ------ EVENT LISTENERS -------------*/
@@ -91,6 +100,22 @@ colorInput.addEventListener('input', function(){
 resetBtn.addEventListener('click', function(){ 
     resetCanvas(px) 
 });
+
+speakerOn.addEventListener('click', function() {
+    console.log("Speaker clicked (on - off)")
+    audioActive = false
+    audioTrack.volume = 0
+    speakerOn.setAttribute('style', 'display: none;')
+    speakerOff.setAttribute('style', 'display: block;')
+})
+
+speakerOff.addEventListener('click', function() {
+    console.log("Speaker clicked (off - on)")
+    audioActive = true
+    audioTrack.volume = 0.075
+    speakerOn.setAttribute('style', 'display: block;')
+    speakerOff.setAttribute('style', 'display: none;')
+})
 
 
 /* ------ FUNCTIONS -----------------*/
