@@ -19,7 +19,7 @@ const audioButtons = document.getElementsByClassName('audio-btn')
 const speakerOn = document.getElementById('speaker-on')
 const speakerOff = document.getElementById('speaker-off')
 
-console.log(audioButtons)
+
 /* ------ DEFAULT/INITIAL VALUES ----- */
 
 // Global variables to set default states and to track the state 
