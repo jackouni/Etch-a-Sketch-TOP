@@ -33,7 +33,6 @@ body {
     height: 100vh;
     background-image: url('media/imgs/cloudy-landscape-cumulus-haze-scenic.jpg');
     background-position: center;
-    overflow: hidden;
 } 
 
 #info-icon-container {
@@ -263,12 +262,12 @@ audio {
 }
 
 #info-modal {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    color: white;
     left: -1rem;
     top: -5px;
-    gap: 3rem;
     z-index: 1;
     width: 101.5vw;
     padding: 2rem;
@@ -276,12 +275,22 @@ audio {
     box-shadow: 0 0 0.1rem 0.1rem #fffcc0;
     background-color: black;
     border-radius: 5px;
-    opacity: 0.9;
+    opacity: 0.95;
     overflow: scroll;
 }
 
-.explainer-section {
-    width: 80%;
-    height: 200px;
+.explainer-section, .explainer-header, .explainer-footer {
+    display: flex;
+    width: 95%;
+    height: 300px;
     border: solid red 5px;
+}
+
+.explainer-img {
+    width: auto;
+    height: auto;
+    margin: 1.5%;
+}
+.explainer-text {
+    align-self: center;
 }
