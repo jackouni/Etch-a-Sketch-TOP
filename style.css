@@ -287,7 +287,6 @@ audio {
     border-radius: 5px;
     opacity: 0.95;
     align-items: center;
-    gap: 3rem;
     transition: 2s;
 }
 
@@ -301,15 +300,17 @@ p {
     font-size: 16px;
 }
 
-.explainer-section, .explainer-header, .explainer-footer {
+.explainer-section, .explainer-header {
     display: flex;
     height: 300px;
     border: solid rgba(196, 196, 196, 0.309) 5px;
+    margin-bottom: 4rem ;
 }
 
 .explainer-header {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 4rem ;
     padding: 20px;
 }
 
@@ -337,3 +338,25 @@ p {
 #x-icon:hover {
     opacity: 1;
 }
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.img-socials-container {
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+}
+
+.social-imgs{
+    max-width: 100%;
+}
+
+.social-imgs:hover {
+    cursor: grab;
+    max-width: 110%;
+}
+
