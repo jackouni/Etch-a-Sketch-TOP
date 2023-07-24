@@ -29,10 +29,11 @@ body {
     margin: 0;
     padding: 15px;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    width: 99vw;
+    height: 99vh;
     background-image: url('media/imgs/cloudy-landscape-cumulus-haze-scenic.jpg');
     background-position: center;
+    overflow-x: hidden;
 } 
 
 #info-icon-container {
@@ -110,9 +111,11 @@ audio {
 }
 
 .buttons {
-    height: 8em;
-    width: 8em;
+    height: 8rem;
+    width: 8rem;
+    padding: 0;
     border-radius: 1rem;
+    font-weight: 700;
     border: solid black 0.2rem;
 }
 
@@ -190,8 +193,9 @@ audio {
 }
 
 #input-color {
-    height: 8em;
-    width: 8em;
+    width: 100%;
+    height: 100%;
+    padding: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -200,9 +204,15 @@ audio {
     background-color: transparent;
 }
 
+#color-btn {
+    background-color: transparent;
+    border: none;
+}
+
 #rainbow-btn {
     background-image: linear-gradient(red, orange, yellow, green, blue, indigo, purple);
     opacity: 100%;
+    color: white;
 
     transition: 1s;
 }
@@ -263,11 +273,13 @@ audio {
 
 #info-modal {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     color: white;
     z-index: 1;
-    width: fit-content;
+    right: 8px;
+    top: 4px;
+    width: 95%;
     padding: 2rem;
     height: calc(auto + 10px);
     box-shadow: 0 0 0.1rem 0.1rem #fffcc0;
@@ -276,6 +288,7 @@ audio {
     opacity: 0.95;
     align-items: center;
     gap: 3rem;
+    transition: 2s;
 }
 
 h1 {
@@ -305,13 +318,15 @@ p {
 }
 
 .explainer-img {
+    flex-grow: 2;
     margin: 1.5%;
 }
 .explainer-article {
     align-self: center;
 }
 
-#x-it-icon {
+#x-icon {
+    display: none;
     position: fixed;
     z-index: 2;
     top: 5%;
@@ -319,6 +334,6 @@ p {
     opacity: 0.7;
 }
 
-#x-it-icon:hover {
+#x-icon:hover {
     opacity: 1;
 }

@@ -19,6 +19,10 @@ const audioButtons = document.getElementsByClassName('audio-btn')
 const speakerOn = document.getElementById('speaker-on')
 const speakerOff = document.getElementById('speaker-off')
 
+const infoModal = document.getElementById('info-modal')
+const infoIcon = document.getElementById('info-icon-container')
+const xIcon = document.getElementById('x-icon')
+
 
 /* ------ DEFAULT/INITIAL VALUES ----- */
 
@@ -115,6 +119,18 @@ speakerOff.addEventListener('click', function() {
     audioTrack.volume = 0.075
     speakerOn.setAttribute('style', 'display: block;')
     speakerOff.setAttribute('style', 'display: none;')
+})
+
+infoIcon.addEventListener('click', function() {
+    console.log('info icon clicked')
+    infoModal.setAttribute('style', 'display: block;');
+    xIcon.setAttribute('style', 'display: block;')
+})
+
+xIcon.addEventListener('click', function() {
+    console.log('x-icon clicked')
+    infoModal.setAttribute('style', 'display: none;');
+    xIcon.setAttribute('style', 'display: none;')
 })
 
 
