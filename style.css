@@ -263,7 +263,7 @@ audio {
 
 #info-modal {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     color: white;
     left: -1rem;
