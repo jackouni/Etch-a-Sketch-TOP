@@ -10,125 +10,119 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <header>
+        <div id="info-icon-container">
+            <img src="media/imgs/info-circle-line-icon.png" id="info-icon">
+        </div>
 
-    <div id="x-icon">
-        <img src="media/imgs/x-it-icon.png" alt="">
-    </div>
+        <div id="sound-icon-container"> 
+            <img src="media/imgs/sound-on-icon.png" alt="" id="speaker-on" class="audio-btn">
+            <img src="media/imgs/sound-off-icon.png" alt="" id="speaker-off" class="audio-btn">
+            <audio autoplay loop>
+                <source src="media/audio/Spirit of Fire - Jesse Gallagher.mp3">
+            </audio>
+        </div>
 
-    <div id="info-modal">
-        <div class="explainer-header">
-            <h1>WELCOME TO HEAVENS-SKETCH</h1>
-            <p>This game was designed by Jack Sebben as a project for the free, open-source, self-taught web development
-                curriculum, <a href="https://www.theodinproject.com/">The Odin Project</a>. 
-                If you want to see more of Jack's work and follow his journey as a self-taught web dev - social links can be
-                found below. 
-            </p>
-            <div class="socials">
-                <div class="img-socials-container"><img class="social-imgs" src="media/imgs/github-mark/github-mark-white.png" alt="GitHub"></div>
-                <div class="img-socials-container"><img class="social-imgs" src="media/imgs/Logo_of_Twitter.svg.png" alt="Twitter"></div>
-                <div class="img-socials-container"><img class="social-imgs" src="media/imgs/LinkedIn_logo_initials.png" alt="LinkDIn"></div>
-                <div class="img-socials-container"><img class="social-imgs" src="media/imgs/Youtube_logo.png" alt="YouTube"></div>
+        <div id="info-modal">
+
+            <div id="x-icon">
+                <img src="media/imgs/x-it-icon.png" alt="">
+            </div>
+
+            <div class="explainer-header">
+                <h1>WELCOME TO HEAVENS-SKETCH</h1>
+                <p>This game was designed by Jack Sebben as a project for the free, open-source, self-taught web development
+                    curriculum, <a href="https://www.theodinproject.com/">The Odin Project</a>.
+                    If you want to see more of Jack's work and follow his journey as a self-taught web dev - social links can be
+                    found below.
+                </p>
+                <div class="socials">
+                    <div class="img-socials-container"><img class="social-imgs" src="media/imgs/github-mark/github-mark-white.png" alt="GitHub"></div>
+                    <div class="img-socials-container"><img class="social-imgs" src="media/imgs/Logo_of_Twitter.svg.png" alt="Twitter"></div>
+                    <div class="img-socials-container"><img class="social-imgs" src="media/imgs/LinkedIn_logo_initials.png" alt="LinkDIn"></div>
+                    <div class="img-socials-container"><img class="social-imgs" src="media/imgs/Youtube_logo.png" alt="YouTube"></div>
+                </div>
+            </div>
+            <div class="explainer-section">
+                <img class="explainer-img" src="media/imgs/Modes-explainer.jpg" alt="">
+                <article class="explainer-article">
+                    <p>
+                        We'll start by explaining the modes from the top button to the bottom.
+                    </p>
+                    <p>
+                        <b class="sub-header">Color Mode:</b> This will allow you to pick a solid colour to use on the etch-a-sketch.
+                        By clicking this mode you will bring up a colour pallette where you can
+                        choose what colour you would like to use.
+                        This mode will fill your selected colour to each pixel on the etch-a-sketch that you move over.
+                    </p>
+                    <p>
+                        <b class="sub-header">Rainbow mode:</b> Will fill a random colour to each pixel on the etch-a-sketch that you move over.
+                    </p>
+                    <p>
+                        <b class="sub-header">Eraser mode:</b> Will remove coloured pixels from your etch-a-sketch as you move over them.
+                    </p>
+                    <p>
+                        <b class="sub-header">Reset:</b> This button reset the etch-a-sketch, giving you a clean canvas to work on.
+                    </p>
+                </article>
+            </div>
+            <div class="explainer-section">
+                <img class="explainer-img" src="media/imgs/sketcher-explainer.jpg" alt="">
+                <article class="explainer-article">
+                    <p>
+                        The etch-a-sketch is where you create your drawings. By selecting a mode and moving your cursor over the pixels
+                        on the etch-a-sketch, you will activate/use the mode that is currently active.
+                        Below the etch-a-sketch is a slider where you can adjust the etch-a-sketch's pixel density.
+                        By default the canvas is 16x16 pixels. By moving the slider left or right you can decrease
+                        or increase the number of square pixels in the etch-a-sketch.     <br />
+                        <br />
+                        A higher number = finer strokes     <br />
+                        while a lower number = more blocky     <br />
+                        <br />
+                        <b>
+                            ** HAVE CAUTION: whenever you adjust the pixel density, the etch-a-sketch will reset, erasing whatever
+                            was on it to start fresh.
+                        </b>
+                    </p>
+                </article>
+            </div>
+            <div class="explainer-section">
+                <img class="explainer-img" src="media/imgs/sound-help-toggle.jpg" alt="">
+                <article class="explainer-article">
+                    <p>
+                        <b>Info/Help: </b> Located in the upper left, this icon will show the info modal when clicked.
+                        If you ever need help using the app, or want to see accredations for the site,
+                        you can visit this info modal.
+                    </p>
+                    <p><b>Sound on/off:</b> Located in the upper right,
+                         the speaker icon that will toggle the music to be on or off when clicked on.</p>
+                </article>
             </div>
         </div>
-        <div class="explainer-section">
-            <img class="explainer-img" src="media/imgs/Modes-explainer.jpg" alt="">
-            <article class="explainer-article">
-                <p>
-                    We'll start by explaining the modes from the top button to the bottom.
-                </p>
+    </header>
 
-                <p>
-                    <b class="sub-header">Color Mode:</b> This will allow you to pick a solid colour to use on the etch-a-sketch.
-                    By clicking this mode you will bring up a colour pallette where you can
-                    choose what colour you would like to use.
-                    This mode will fill your selected colour to each pixel on the etch-a-sketch that you move over.
-                </p>
-
-                <p>
-                    <b class="sub-header">Rainbow mode:</b> Will fill a random colour to each pixel on the etch-a-sketch that you move over.
-                </p>
-
-                <p>
-                    <b class="sub-header">Eraser mode:</b> Will remove coloured pixels from your etch-a-sketch as you move over them.
-                </p>
-
-                <p>
-                    <b class="sub-header">Reset:</b> This button reset the etch-a-sketch, giving you a clean canvas to work on.
-                </p>
-
-            </article>
+    <main>
+        <div id="mode-picker-container"> Modes:
+            <button id="color-btn" class="buttons">
+                <input type="color" name="color" id="input-color" value="#0000ff">
+            </button>
+            <button id="rainbow-btn" class="buttons"> Rainbow</button>
+            <button id="eraser-btn" class="buttons">Eraser</button>
+            <button id="reset-btn" class="buttons">Reset</button>
         </div>
-
-        <div class="explainer-section">
-            <img class="explainer-img" src="media/imgs/sketcher-explainer.jpg" alt="">
-            <article class="explainer-article">
-                <p>
-                    The etch-a-sketch is where you create your drawings. By selecting a mode and moving your cursor over the pixels
-                    on the etch-a-sketch, you will activate/use the mode that is currently active.
-                    Below the etch-a-sketch is a slider where you can adjust the etch-a-sketch's pixel density.
-                    By default the canvas is 16x16 pixels. By moving the slider left or right you can decrease
-                    or increase the number of square pixels in the etch-a-sketch.     <br />    
-                    <br />
-
-                    A higher number = finer strokes     <br />
-
-                    while a lower number = more blocky     <br />
-
-                    <br />
-                    <b>
-                        ** HAVE CAUTION: whenever you adjust the pixel density, the etch-a-sketch will reset, erasing whatever
-                        was on it to start fresh.
-                    </b>
-                </p>
-            </article>
+        <div class="etch-sketch-container">
+           <img class="etch-sketch-img" src="media/imgs/etch-a-sketch.png" alt="">
+           <div id="canvas-container"></div>
         </div>
+    </main>
 
-        <div class="explainer-section">
-            <img class="explainer-img" src="media/imgs/sound-help-toggle.jpg" alt="">
-            <article class="explainer-article">
-                <p>
-                    <b>Info/Help: </b> Located in the upper left, this icon will show the info modal when clicked.
-                    If you ever need help using the app, or want to see accredations for the site,
-                    you can visit this info modal.
-                </p>
-
-                <p><b>Sound on/off:</b> Located in the upper right,
-                     the speaker icon that will toggle the music to be on or off when clicked on.</p>
-            </article>
+    <footer>
+        <div id="lower-container">
+            <div id="slider-column">
+                <div class="text">Canvas Size: <span id="value"></span></div>
+                <input type="range" min="2" max="75" value="16" id="slide" class="slider">
+            </div>
         </div>
-    </div>
-
-    <div id="mode-picker-container"> Modes:
-        <button id="color-btn" class="buttons">
-            <input type="color" name="color" id="input-color" value="#0000ff">
-        </button>
-        <button id="rainbow-btn" class="buttons"> Rainbow</button>
-        <button id="eraser-btn" class="buttons">Eraser</button>
-        <button id="reset-btn" class="buttons">Reset</button>
-    </div>
-
-    <div class="etch-sketch-container">
-       <img class="etch-sketch-img" src="media/imgs/etch-a-sketch.png" alt="">
-       <div id="canvas-container"></div>
-    </div>
-
-    <div class="icons-container">
-        <img src="media/imgs/sound-on-icon.png" alt="" id="speaker-on" class="audio-btn">
-        <img src="media/imgs/sound-off-icon.png" alt="" id="speaker-off" class="audio-btn">
-        <audio autoplay loop>
-            <source src="media/audio/Spirit of Fire - Jesse Gallagher.mp3">
-        </audio>
-    </div>
-
-    <div id="info-icon-container">
-        <img src="media/imgs/info-circle-line-icon.png" id="info-icon">
-    </div>
-
-    <div id="lower-container">
-        <div id="slider-column">
-            <div class="text">Canvas Size: <span id="value"></span></div>
-            <input type="range" min="2" max="75" value="16" id="slide" class="slider">
-        </div>
-    </div>
+    </footer>
 </body>
 </html>
